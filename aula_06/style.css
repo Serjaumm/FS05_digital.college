@@ -1,0 +1,86 @@
+/* Isso é um comentário no css */
+
+/* reset do css */
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+/* Define a fonte da minha pagina */
+}
+
+h1 {
+color: green;
+/* color: muda a cor do texto */
+background-color: darkblue;
+/* background-color : muda a cor de fundo do elemento */
+width: 800px;
+/* width: É a largura do meu elemento e pode ser px ou % */
+height: 200px;
+/* height: É a alteura do meu elemento e pode ser px ou % */
+}
+
+.paragrafo-vermelho {
+font-size: 36px;
+/*font-size: tamanho da fonte */
+font-weight: bold;
+/* font-weight: peso da fonte */
+background-color: red;
+border: 10px solid black;
+/* border: cria uma borda no elemento */
+margin-bottom: 30px;
+margin-top: 30px;
+/* margin: espaçamento externo do elemento */
+padding: 30px;
+/* padding: espaçamento interno do elemento */
+text-align: justify;
+/* text-align: ajusta o alinhamento de texto de acordo com a largura disponivel */
+}
+
+a {
+background-color: blue;
+color: white;
+padding: 20px 25px;
+font-size: 30px;
+font-weight: bold;
+margin-top: 100px;
+display: block;
+/* display: block - transforma meu elemento para ter comportamento de bloco */
+width: fit-content;
+/* width: fit-content - ajusta a largura para o meu conteúdo */
+margin-bottom: 50px;
+margin-left: 50px;
+text-decoration: none;
+/* text-decoration: none - remove o sublinhado da tag <a> */
+border-radius: 16px;
+}
+
+a:hover {
+/* comportamento do elemento quando o mouse fica sobre ele */
+background-color: darkblue;
+}
+
+ul {
+margin-left: 50px;
+list-style: none;
+/* list-style: none - remove as bolinhas ou numeros das listas */
+}
+
+/* seletores por class (classe) ou id */
+/* class pode repetir o mesmo valor para as tags */
+/* id eu posso atribuir um unico valor e ele não pode repetir */
+
+#item-destaque {
+background-color: red;
+color: white;
+}
+
+#frase {
+font-size: 24px;
+width: 100%;
+text-align: center;
+background-color: red;
+}
