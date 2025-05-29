@@ -1,53 +1,85 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprendendo TailwindCSS</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/index.min.js"></script>
-    <title>Tree links</title>
   </head>
   <body>
-      <main class="w-full h-screen">
-         <header class="flex justify-end p-4">
-            <i onclick="changeTheme()" 
-            id="themeIcon"
-            class="ph-thin ph-sun cursor-pointer p-2 hover:bg-gray-200 rounded-lg transition-all duration-400" ></i>
-         </header>
-         <main class="flex justify-center items-center h-full ">
-            <section class="border border-gray-400 rounded-lg p-6 flex justify-center items-center flex-col gap-4">
-               <img class="w-32 h-32 rounded-full border-4 border-gray-300"       src="https://github.com/Serjaumm.png" alt="imagem de perfil">
+    <div>
+      <header class="bg-[#A223C6] flex justify-center py-[35px]">
+        <div class="w-[80%] flex flex-row justify-between items-center">
+          <img
+            class="w-[100px]"
+            src="https://www.melhorcambio.com/cartoes/images/nubank-logo.png"
+            alt="logo-nu"
+          />
+          <ul class="flex flex-row gap-[20px] text-xl text-white">
+            <li>Home</li>
+            <li>Cartões</li>
+            <li>Investimentos</li>
+            <li>Créditos</li>
+          </ul>
+        </div>
+      </header>
 
-               <h1 class="font-bold text-2xl">Sérgio Daniel</h1>
-               <p class="text-slate-500">Desenvolvedor Fullstack</p>
+      <main class="bg-[#f4f4f4] py-10 px-20 max-[650px]:px-10"> 
+        <h1 class="text-5xl font-semibold m-6 hover:text-[#A223C6] transition-all duration-400 max-[650-px]:text-4xl max-[650-px]:text-center">Nossos dados Brasil</h1>
+        <div class="flex flex-row gap-5 max-[1000px]:flex-col">
+          <div class="flex flex-col gap-5 max-[1000px]:w-full">
+            <div class="flex flex-row flex-grow gap-5 max-[650px]:flex-col"> 
+              <div class="bg-white rounded-2xl w-[50%] p-5 max-[650px]:w-full">
+                <p class="text-3xl text-[#A223C6] font-semibold mb-5">105 mi</p>
+                <p class="text-xl font-semibold">de clientes no Brasil.</p>
+              </div>
 
-               <section class="flex flex-col gap-3">
-                  
-                  <button class="border-gray-300 border min-w-96 py-2 rounded-lg">
-                     <a class="w-full h-full flex justify-center item-center gap-5" href="https://www.instagram.com/dan.gomess_/?hl=pt-br">
-                        <i class="ph-thin ph-instagram-logo text-2xl"></i>
-                        <p>Instagram</p>
-                     </a>
-                  </button>
-                  
-                  <button class="border-gray-300 border min-w-96 py-2 rounded-lg">
-                     <a class="w-full h-full flex justify-center item-center gap-5" href="https://github.com/Serjaumm">
-                        <i class="ph-thin ph-github-logo text-2xl"></i>
-                        <p>Github</p>
-                     </a>
-                  </button>
-                  
-                  <button class="border-gray-300 border min-w-96 py-2 rounded-lg">
-                     <a class="w-full h-full flex justify-center item-center gap-5" href="https://br.linkedin.com/?trk=guest_homepage-basic_nav-header-logo">
-                        <i class="ph-thin ph-linkedin-logo text-2xl"></i>
-                        <p>LinkedIn</p>
-                     </a>
-                  </button>
-               
-               </section>
-            </section>
-         </main>
+              <div class="bg-white rounded-2xl w-[50%] p-5 max-[650px]:w-full">
+                <p class="text-3xl text-[#A223C6] font-semibold mb-5">59%</p>
+                <p class="text-xl font-semibold">
+                  da população adulta é cliente do Nu.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl flex-grow p-5">
+              <p class="text-3xl text-[#A223C6] font-semibold mb-5">20.7 mi</p>
+              <p class="text-xl font-semibold">
+                de brasileiros tiveram seu 1º cartão com o Nu, em cinco anos.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-5 w-[50%] max-[1000px]:w-full">
+            <h3 class="text-4xl font-bold mb-4">Dados Nu Holdings</h3>
+
+            <div class="flex flex-row gap-5">
+              <div class="w-[50%]">
+                <p class="text-xl text-[#A223C6] font-semibold">US$ 3,2 bi</p>
+                <p class="text-xl font-semibold mb-8">de receita no T1'25.</p>
+
+                <p class="text-xl text-[#A223C6] font-semibold">US$ 0,7</p>
+                <p class="text-xl font-semibold mb-6"> de custo médio mensal de atendimento por cliente ativo no T1'25.</p>
+                
+
+                <p class="text-xl text-[#A223C6] font-semibold">US$ 11,2</p>
+                <p class="text-xl font-semibold">de receita média mensal por cliente ativo (ARPAC, na sigla em inglês) no T1'25.</p>
+              </div>
+
+              <div class="w-[50%]">
+                <p class="text-xl text-[#A223C6] font-semibold">83,2%</p>
+                <p class="text-xl font-semibold mb-6">de taxa de atividade mensal no T1'25.</p>
+
+                <p class="text-xl text-[#A223C6] font-semibold">US$ 557,2 mi</p>
+                <p class="text-xl font-semibold">de lucro líquido no T1'25.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
-      <script src="script.js"></script>
+
+      <footer class="bg-[#A223C6] text-white text-center py-10 text-xl">
+        &copy; Todos os direitos reservados para Nubank
+      </footer>
+    </div>
   </body>
 </html>
