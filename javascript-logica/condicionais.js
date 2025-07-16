@@ -164,15 +164,99 @@ function faixaSalarial(salario) {
 // •	entre 6 e 8h: “Sono normal”
 // •	mais de 8h: “Muito sono”
 
+function horasDormidas(horas) {
+  let horasDeSono = 7;
+
+  switch (true) {
+    case horas <= 6:
+      console.log("Pouco sono");
+      break;
+    case horas >= 6 && horas <= 8:
+     console.log("Sono normal");
+      break;
+    case horas >8:
+     console.log("Muito sono");
+      break;
+    default:console.log("horas inválidas");
+}
+}
+
 // 12.	Crie uma função que receba dois números e uma string representando a operação (“soma”, “subtração”, “multiplicação”, “divisão”) e retorne o resultado.
+function calcular(n1, n2, operador) {
+  let n1 = 10;
+  let n2 = 5;
+  let operador = "soma"; // pode ser "soma", "subtração", "multiplicação" ou "divisão"
+  switch (operador) {
+    case "soma":
+      console.log ("resultado da soma:" (n1 + n2));
+      break;
+    case "subtração":
+      console.log("Resultado da subtração:" (n1 - n2));
+      break;
+    case "multiplicação":
+      console.log("Resultado da multiplicação:"(n1*n2));
+      break;
+    case "divisão":
+      console.log("Resultado da divisão:"(n1/n2));
+      break;
+    default:console.log("operador inválido");
+}}
+
+
+
 // 13.	Crie uma função que receba um ano e diga se ele é bissexto (divisível por 4 e não por 100, exceto se for divisível por 400).
 // 14.	Crie uma função que receba um objeto pessoa com nome e idade. Se a idade for maior que 60, retorne “Idoso”, senão “Não idoso”.
+function verificaIdoso(pessoa) {
+  let pessoa = {
+    nome:"José",
+    idade: 65,
+  };
+  switch (pessoa.idade){
+    case pessoa.idade > 60:
+      console.log("Idoso");
+      break;
+    case pessoa.idade <= 60:
+      console.log("Não idoso");
+      break;
+    default: console.log("Idade inválida");
+  }
+  }
+
 // 15.	Crie uma função que receba a idade de duas pessoas. Verifique se podem entrar juntas em um evento (ambas com 18+).
+function verificaDeMaior(idade1, idade2) {
+  let idade1 = 20;
+  let idade2 = 17;
+  switch (true) {
+    case idade1 >=18 && idade2 >= 18:
+      console.log("Ambas podem entrar no evento");
+      break;
+    default: console.log("Não podem entrar juntas no evento");
+  }
+}
+
 // 16.	Crie uma função que receba três notas e retorne a média e a situação:
 
 // •	média >= 7: “Aprovado”
 // •	média >= 5: “Recuperação”
 // •	média < 5: “Reprovado”
+function verificaMedia(n1,n2,n3) {
+  let n1 = 7;
+  let n2 = 6;
+  let n3 = 10;
+  const media = (n1 + n2 + n3) / 3;
+  switch (true) {
+    case media >=7:
+      console.log("Aprovado");
+      break;
+    case media >= 5:
+      console.log("Recuperação");
+      break;
+    case media < 5:
+      console.log("Reprovado");
+      break;
+    default:
+      console.log("Notas inválidas");
+  }}    
 
 // 17.	Crie uma função que receba uma string e verifique se o primeiro caractere é uma vogal.
 // 18.	Crie uma função que receba um número de 0 a 10 e diga se ele está dentro da faixa ou fora.
@@ -207,3 +291,70 @@ function faixaSalarial(salario) {
 // 29.	Crie uma função que receba o número de faltas de um aluno. Se for maior que 25, retorne “Reprovado por falta”.
 
 // 30.	Crie uma função que receba um nome e uma idade. Se o nome for “admin” e a idade maior que 18, retorne “Acesso total”. Caso contrário, “Acesso limitado”.
+
+
+let diaSemana = 2;
+
+switch (diaSemana) {
+  case 1:
+    console.log("Domingo");
+    break;
+  case 2:
+    console.log("Segunda-feira");
+    break;
+  case 3:
+    console.log("Terça-feira");
+    break;
+  case 4:
+    console.log("Quarta-feira");
+    break;
+  case 5:
+    console.log("Quinta-feira");
+    break;
+  case 6:
+    console.log("Sexta-feira");
+    break;
+  case 7:
+    console.log("Sábado");
+    break;
+  default:
+    console.log(" Dia inválido");
+}
+
+let idade1 =25;
+
+switch (true) {
+  case idade1 >= 0 && idade1 <= 12:
+    console.log("Criança");
+    break;
+  case idade1 >= 13 && idade1 <= 17:
+    console.log("Adolescente");
+    break;
+  case idade1 >= 18 && idade1 <= 59:
+    console.log("Adulto");
+    break;
+  case idade1 >= 60:
+    console.log("Idoso");
+    break;
+  default:
+    console.log("Idade inválida");
+}
+
+let nota = 8.2;
+
+switch (true) {
+  case nota >= 9:
+    console.log ("Conceito A");
+    break;
+  case nota >= 7:
+    console.log ("Conceito B");
+    break;
+  case nota >=5:
+    console.log ("Conceito C");
+    break;
+  case nota >= 3:
+    console.log ("Conceito D");
+    break;
+  default:
+    console.log ("Conceito F");
+}
