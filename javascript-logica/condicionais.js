@@ -205,6 +205,8 @@ function calcular(n1, n2, operador) {
 
 
 // 13.	Crie uma função que receba um ano e diga se ele é bissexto (divisível por 4 e não por 100, exceto se for divisível por 400).
+
+
 // 14.	Crie uma função que receba um objeto pessoa com nome e idade. Se a idade for maior que 60, retorne “Idoso”, senão “Não idoso”.
 function verificaIdoso(pessoa) {
   let pessoa = {
@@ -259,17 +261,119 @@ function verificaMedia(n1,n2,n3) {
   }}    
 
 // 17.	Crie uma função que receba uma string e verifique se o primeiro caractere é uma vogal.
+
+
 // 18.	Crie uma função que receba um número de 0 a 10 e diga se ele está dentro da faixa ou fora.
+function verificaFaixa(numero) {
+  let numero = 5;
+  switch (true) {
+    case numero >= 0 && numero <= 10:
+      console.log("O número está dentro da faixa");
+      break;
+    default:
+      console.log("O número está fora da faixa");
+  }
+}
+
 // 19.	Crie uma função que receba o nome de um produto e o estoque. Se o estoque for zero, retorne “Produto esgotado”, senão “Disponível”.
+function verificaEstoque(produto, estoque) {
+  let produto = "Maçã";
+  let estoque = 0;
+  switch (true) {
+    case estoque === 0:
+      console.log ("Produto esgotado");
+      break;
+    case estoque > 0:
+      console.log ("Disponível");
+      break;
+    default:
+      console.log("Produto inválido");
+  }
+}
+
 // 20.	Crie uma função que receba um array com 3 números e retorne qual deles é o menor.
+function menorNnumero(num){
+  let num = [5,8,2];
+  let menor 
+
+  switch (true) {
+    case num[0] <= num[1] && num[0] <= num[2]:
+      menor = num[0];
+      break;
+    case num[1] <= num[0] && num[1] <= num[2]:
+      menor = num[1];
+      break;
+    case num[2] <= num[0] && num[2] <= num[1]:
+      menor = num[2];
+      break;
+    default:
+      menor = "Todos os números são iguais";   
+  }
+}
 
 // 21.	Crie uma função que receba um objeto carro com marca e ano. Se o carro for após 2015, retorne “Moderno”, senão “Antigo”.
+function verificaAnoCarro (carro){
+  let carro = 
+  {
+    marca: "Volkswagen",
+    ano: 2014
+  }
+  switch (true){
+    case carro.ano > 2015:
+      console.log("Moderno");
+      break;
+    case carro.ano <= 2015:
+      console.log("Antigo");
+      break;
+    default:
+      console.log("Ano inválido");
+  }
+}
 
 // 22.	Crie uma função que receba um valor booleano e retorne “Ligado” se for true, e “Desligado” se for false.
+function verificaBooleano(valor) {
+  switch (valor) {
+    case true:
+      console.log("Ligado");
+      break;
+    case false:
+      console.log("Desligado");
+      break;
+    default:
+      console.log("Valor inválido");
+  }
+}
 
 // 23.	Crie uma função que receba um número e diga se ele está entre 10 e 20 (inclusive).
+function verificaNumeroIntervalo(numero){
+  switch (true) {
+    case numero >= 10 && numero <= 20:
+      console.log("O número está entre 10 e 20");
+      break;
+    default:
+      console.log("O número não está entre 10 e 20");
+      break;
+  }
+}
 
 // 24.	Crie uma função que receba um objeto usuario com a propriedade ativo (true/false). Se ativo for false, retorne “Acesso bloqueado”.
+function verificaPessoa(pessoa) {
+  let pessoa = 
+  {
+    nome: "Sergio",
+    ativo: false,
+  }
+  switch (pessoa){
+    case false:
+      console.log ("Acesso bloqueado");
+      break;
+    case true:
+      console.log ("Acesso permitido");
+      break;
+    default:
+      console.log ("Usuário inválido");
+  }
+}
 
 // 25.	Crie uma função que receba o peso e altura e calcule o IMC. Retorne a faixa:
 
@@ -277,20 +381,107 @@ function verificaMedia(n1,n2,n3) {
 // •	IMC < 25: “Normal”
 // •	IMC < 30: “Sobrepeso”
 // •	Acima: “Obesidade”
+function calcularIMC(peso, altura) {
+  const imc = peso / (altura * altura);
+
+  switch (true) {
+    case imc < 18.5:
+      console.log("Abaixo do peso");
+      break;
+    case imc < 25:
+      console.log("Normal");
+       break;
+    case imc < 30:
+     console.log("Sobrepeso");
+      break;
+    default:
+      console.log("Obesidade");
+      break;
+  }
+}
 
 // 26.	Crie uma função que receba uma temperatura em Celsius e indique:
 
 // •	abaixo de 10: “Muito frio”
 // •	entre 10 e 25: “Clima agradável”
 // •	acima de 25: “Muito calor”
+function verificaTemperatura(temperatura) {
+  let temperatura = 15;
+  switch (true){
+    case temperatura <10:
+      console.log("Muito frio");
+      break;
+    case temperatura >=10 && temperatura <= 25:
+      console.log("Clima agradável");
+      break;
+    default:
+      console.log("Muito calor");
+      break;
+  }
+} 
 
 // 27.	Crie uma função que receba dois números e diga se um é divisor exato do outro.
+function verificaDivisao(n1,n2){
+  let n1 = 10;
+  let n2 = 5;
+  switch (true){
+    case n1 % n2 === 0:
+      console.log(`${n2} é divisor exato de ${n1}`);
+      break;
+    case n2 % n1 === 0:
+      console.log(`${n1} é divisor exato de ${n2}`);
+      break;
+    default:
+      console.log("Nenhum é divisor exato do outro");
+  }
+}
 
 // 28.	Crie uma função que receba o turno de estudo de um aluno (“manhã”, “tarde”, “noite”) e retorne uma saudação apropriada.
+function saudacaoTurno(turno){
+  let turno = "tarde";
+  switch (turno) {
+    case "manhã":
+      console.log("Bom dia");
+      break;
+    case "tarde":
+      console.log("Boa tarde");
+      break;
+    case "noite":
+      console.log("Boa noite");
+      break;
+    default:
+      console.log("Turno inválido");
+  }
+}
 
 // 29.	Crie uma função que receba o número de faltas de um aluno. Se for maior que 25, retorne “Reprovado por falta”.
+function verificaFaltas(faltas){
+  let faltas = 28;
+  switch(true){
+    case faltas > 25:
+      console.log("Reprovado por falta");
+      break;
+    case faltas <= 25:
+      console.log("Aprovado");
+      break;
+    default:
+      console.log("Número de faltas inválido");
+  }
+}
 
 // 30.	Crie uma função que receba um nome e uma idade. Se o nome for “admin” e a idade maior que 18, retorne “Acesso total”. Caso contrário, “Acesso limitado”.
+function verificaAcesso(nome,idade){
+  let nome = "admin";
+  let idade = 20;
+
+  switch (true) {
+    case nome === "admin" && idade > 18:
+      console.log("Acesso total");
+      break;
+    default:
+      console.log("Acesso limitado");
+  }
+}
 
 
 let diaSemana = 2;
