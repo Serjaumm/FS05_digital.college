@@ -30,7 +30,6 @@ console.log(resultado);
 //EXERCICIOS CONDICIONAIS
 
 // 1.	Crie uma função que receba um número e exiba se ele é positivo, negativo ou zero.
-
 function verificaNumero(numero) {
   if (numero < 0) {
     console.log("NEGATIVO");
@@ -46,7 +45,6 @@ console.log(verificaNumero(-5));
 console.log(verificaNumero(0));
 
 // 2.	Crie uma função que receba o nome de uma pessoa. Se o nome tiver mais de 5 letras, retorne “Nome longo”, senão “Nome curto”.
-
 function verificaNome(nome) {
   if (nome.length > 5) {
     return "Nome longo";
@@ -59,7 +57,6 @@ console.log(verificaNome("Ana"));
 console.log(verificaNome("Rodrigo"));
 
 // 3.	Crie uma função que receba a idade de uma pessoa e retorne se ela é “Criança”, “Adolescente”, “Adulto” ou “Idoso”.
-
 function classificarIdade(idade) {
   if (idade < 0) {
     return "Digite um numero positivo";
@@ -77,7 +74,6 @@ function classificarIdade(idade) {
 }
 
 // 4.	Crie uma função que receba dois números e retorne o maior deles.
-
 function maiorNumero(num1, num2) {
   if (num1 > num2) {
     return num1;
@@ -87,7 +83,6 @@ function maiorNumero(num1, num2) {
 }
 
 // 5.	Crie uma função que receba um número e retorne true se for par, e false se for ímpar.
-
 function numeroPar(num) {
   if (num % 2 === 0) {
     return true;
@@ -97,7 +92,6 @@ function numeroPar(num) {
 }
 
 // 6.	Crie uma função que receba o valor de uma compra. Se o valor for maior que 100, aplique 10% de desconto e retorne o novo valor.
-
 function aplicaDesconto(valor) {
   if (valor > 100) {
     return valor * 0.9;
@@ -107,7 +101,6 @@ function aplicaDesconto(valor) {
 }
 
 // 7.	Crie uma função que receba o nome de um aluno e sua nota. Retorne “Aprovado” se a nota for >= 6, senão “Reprovado”.
-
 function resultadoAluno(nome, nota) {
   if (nota >= 6) {
     return `${nome} está Aprovado`;
@@ -117,7 +110,6 @@ function resultadoAluno(nome, nota) {
 }
 
 // 8.	Crie uma função que receba dois números e retorne se eles são iguais, se forem diferentes, qual deles é o maior.
-
 function comparar(a, b) {
   if (a === b) {
     return "Iguais";
@@ -129,7 +121,6 @@ function comparar(a, b) {
 }
 
 // 9.	Crie uma função que receba um número e informe se ele é múltiplo de 3, de 5, de ambos ou de nenhum.
-
 function multiplo(numero) {
   if (numero % 3 === 0 && numero % 5 === 0) {
     return "Múltiplo de 3 e 5";
@@ -143,11 +134,9 @@ function multiplo(numero) {
 }
 
 // 10.	Crie uma função que receba o salário de um funcionário e retorne a faixa salarial:
-
 // •	até 2000: “Baixa”
 // •	até 5000: “Média”
 // •	acima: “Alta”
-
 function faixaSalarial(salario) {
   if (salario <= 2000) {
     return "Baixa";
@@ -163,7 +152,6 @@ function faixaSalarial(salario) {
 // •	menos de 6h: “Pouco sono”
 // •	entre 6 e 8h: “Sono normal”
 // •	mais de 8h: “Muito sono”
-
 function horasDormidas(horas) {
   let horasDeSono = 7;
 
@@ -237,7 +225,6 @@ function verificaDeMaior(idade1, idade2) {
 }
 
 // 16.	Crie uma função que receba três notas e retorne a média e a situação:
-
 // •	média >= 7: “Aprovado”
 // •	média >= 5: “Recuperação”
 // •	média < 5: “Reprovado”
@@ -261,7 +248,20 @@ function verificaMedia(n1,n2,n3) {
   }}    
 
 // 17.	Crie uma função que receba uma string e verifique se o primeiro caractere é uma vogal.
-
+function verificaString(string){
+  let string = "Ana";
+  switch (string.CharAt(0).toLowerCase()){
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+      console.log("O primeiro caractere é uma vogal");
+      break;
+    default:
+      console.log("O primeiro caractere não é uma vogal");
+  }
+}
 
 // 18.	Crie uma função que receba um número de 0 a 10 e diga se ele está dentro da faixa ou fora.
 function verificaFaixa(numero) {
@@ -376,7 +376,6 @@ function verificaPessoa(pessoa) {
 }
 
 // 25.	Crie uma função que receba o peso e altura e calcule o IMC. Retorne a faixa:
-
 // •	IMC < 18.5: “Abaixo do peso”
 // •	IMC < 25: “Normal”
 // •	IMC < 30: “Sobrepeso”
@@ -401,7 +400,6 @@ function calcularIMC(peso, altura) {
 }
 
 // 26.	Crie uma função que receba uma temperatura em Celsius e indique:
-
 // •	abaixo de 10: “Muito frio”
 // •	entre 10 e 25: “Clima agradável”
 // •	acima de 25: “Muito calor”
