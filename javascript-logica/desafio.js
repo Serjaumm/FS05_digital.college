@@ -31,7 +31,7 @@ vendaProduto(produto, quantidade = 1) {
                   console.log('- ' + produto.nome + ': ' + produto.estoque + ' unidades');
                   totalEstoque += produto.estoque;
             }
-            console.log (`Estoque total: ${produto.estoque} unidades`)
+            console.log (`Estoque total: ${totalEstoque} unidades`)
       },
       valorEmCaixa(){
             console.log(`Valor em caixa: R$ ${caixa.saldo.toFixed(2)}`);
