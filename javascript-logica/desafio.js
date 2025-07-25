@@ -1,6 +1,6 @@
 //crie um mercantil funcional, com um array chamado mercantil que tenha objeots reperesentando produtos com nome, preço e quantidade em estoque.
 //crie um objeto chamado caixa que tenha as propriedades saldo, produtosVendidos e metodos como vendaProduto, contar estoque, valorEmCaixa.
-
+console.log("Desafio de objetos em JavaScript");
 const mercantil = [
       {nome: "Arroz", preco: 4.00, estoque: 50},
       {nome: "Feijão", preco: 5.00, estoque: 30},
@@ -14,29 +14,60 @@ const caixa ={
    saldo: 0,
    produtosVendidos: 0,
 
-vendaProduto(nome, preco, quantidade) {
-      for (let i = 0; i < mercantil.length; i++) {
-            if (mercantil[i].nome === nome){
-                  if (mercantil[i].estoque >= quantidade){
-                        mercantil[i].estoque -= quantidade;
-                        caixa.saldo += preco * quantidade;
-                        caixa.produtosVendidos += quantidade;
-                        console.log(`Venda realizada: ${quantidade} x ${nome}`);
-                  }     else {
-                        console.log(`Estoque insuficiente de ${nome}`);
-                        }
-                  }
+vendaProduto(produto, quantidade = 1) {
+      if (produto.estoque >= quantidade) {
+            produto.estoque -= quantidade;
+            caixa.saldo += produto.preco * quantidade;
+            caixa.produtosVendidos += quantidade;
+            console.log(`Venda: ${quantidade} de ${produto.nome}`);
+      } else {
+            console.log(`Estoque insuficiente de ${produto.nome}`);
             }
-      console.log("Produto não encontrado: " + nome);
       },
       contarEstoque() {
             let totalEstoque = 0;
             for (let i = 0; i < mercantil.length; i++) {
-                  totalEstoque += mercantil[i].estoque;
+                  let produto = mercantil[i];
+                  console.log('- ' + produto.nome + ': ' + produto.estoque + ' unidades');
+                  totalEstoque += produto.estoque;
             }
-            console.log (`Estoque total: ${totalEstoque} unidades`)
+            console.log (`Estoque total: ${produto.estoque} unidades`)
       },
       valorEmCaixa(){
             console.log(`Valor em caixa: R$ ${caixa.saldo.toFixed(2)}`);
       }
 };
+
+//Menu para interação com o mercantil escolhendo qual metodo usar
+function menu(opcao){
+      switch(opcao) {
+            case 1:
+                  caixa.vendaProduto(mercantil[0], 3);
+                  break;
+            case 2:
+                  caixa.vendaProduto(mercantil[2], 2);
+                  break;
+            case 3:
+                  caixa.contarEstoque();
+                  break;
+            case 4:
+                  caixa.valorEmCaixa();
+                  break;
+            default:
+                  console.log("Opção inválida.");
+      }
+}
+
+console.log("Bem-vindo ao Mercantil!");
+console.log("Temos um menu de opções:");
+console.log("1. Vender 3 unidades de Arroz");
+console.log("2. Vender 2 unidades de Macarrão");
+console.log("3. Contar estoque de produtos");
+console.log("4. Ver valor em caixa");
+
+menu(1);
+menu(2);
+menu(3);
+menu(4);
+
+console.log("Obrigado por usar o mercantil.");
