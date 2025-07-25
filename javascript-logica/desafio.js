@@ -14,9 +14,29 @@ const caixa ={
    saldo: 0,
    produtosVendidos: 0,
 
-   vendaProduto(nome, preco, quantidade) {
+vendaProduto(nome, preco, quantidade) {
       for (let i = 0; i < mercantil.length; i++) {
-            if mercanitl 
+            if (mercantil[i].nome === nome){
+                  if (mercantil[i].estoque >= quantidade){
+                        mercantil[i].estoque -= quantidade;
+                        caixa.saldo += preco * quantidade;
+                        caixa.produtosVendidos += quantidade;
+                        console.log(`Venda realizada: ${quantidade} x ${nome}`);
+                  }     else {
+                        console.log(`Estoque insuficiente de ${nome}`);
+                        }
+                  }
+            }
+      console.log("Produto não encontrado: " + nome);
+      },
+      contarEstoque() {
+            let totalEstoque = 0;
+            for (let i = 0; i < mercantil.length; i++) {
+                  totalEstoque += mercantil[i].estoque;
+            }
+            console.log (`Estoque total: ${totalEstoque} unidades`)
+      },
+      valorEmCaixa(){
+            console.log(`Valor em caixa: R$ ${caixa.saldo.toFixed(2)}`);
       }
-}
-}
+};
