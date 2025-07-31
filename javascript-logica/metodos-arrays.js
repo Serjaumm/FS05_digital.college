@@ -75,3 +75,8 @@ const numerosImparesDobrados = numeros.map((item,index)=>{
     }
 });
 console.log(numerosImparesDobrados);
+
+//filter() - retorna um novo array apenas com os elementos que atendem uma condição
+const meuArrayNumeros = [1, 2, 3, 4, 5, 6];
+
+const maiorQueTres
